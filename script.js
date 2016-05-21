@@ -48,7 +48,7 @@ $(function() {
             }
         }
 
-        var methodLen = Object.keys(myKantai).length;
+        var methodLen = Object.keys(method).length;
 
         for (var j = 0; j < methodLen - 1; j++) {
             methodDone.push(false);
