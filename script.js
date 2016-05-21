@@ -57,7 +57,7 @@ $(function() {
     })(jQuery);
 
     //Example
-    func.bar().hoo().done(function() {
+    func.barTask().hooTask().done(function() {
         $("#view").html("done");
     });
 
