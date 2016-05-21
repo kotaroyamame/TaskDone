@@ -1,14 +1,19 @@
 $(function() {
 
-    var func = (function($) {
+    var Func = (function($) {
         var _ = this;
         var job = [];
         var methodDone = [];
+        _.val;
         _.callback;
+        function Func(val){
+          _.val=val;
+          return method;
+        }
         var method = {
             hooTask: function(func) {
               setTimeout(function() {
-                $("h1").html("hooTask");
+                $("h1").html("hooTask "+_.val);
                 setTimeout(function() {
 
                     //
@@ -19,7 +24,7 @@ $(function() {
             },
             barTask: function() {
               setTimeout(function() {
-                $("h1").html("barTask");
+                $("h1").html("barTask "+_.val);
                 setTimeout(function() {
                     
                     //
@@ -53,9 +58,10 @@ $(function() {
         for (var j = 0; j < methodLen - 1; j++) {
             methodDone.push(false);
         }
-        return method;
+        return Func;
     })(jQuery);
 
+    var func = new Func("value");
     //Example
     func.barTask().hooTask().done(function() {
         $("#view").html("done");
